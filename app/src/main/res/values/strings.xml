@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MindfulApp</string>
+    <string name="title_activity_mindful_breathing_counter">MindfulBreathingCounter</string>
+</resources>

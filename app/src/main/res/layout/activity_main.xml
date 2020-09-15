@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/holo_blue_light">
+
+
+    <TextView
+        android:id="@+id/appTittle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Mindful App"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mindfulBreathingButton"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.2"
+        android:id="@+id/mindfulBreathingButton"
+        android:text="Mindful Breathing Counter"
+        app:layout_constraintTop_toBottomOf="@id/appTittle"
+        app:layout_constraintBottom_toTopOf="@id/toDoButton"
+        android:onClick="mindBreathingCounterClicked"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.2"
+        android:id="@+id/toDoButton"
+        android:text="To-do list"
+        app:layout_constraintTop_toBottomOf="@id/mindfulBreathingButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="toDoListClicked"/>
+
+</android.support.constraint.ConstraintLayout>

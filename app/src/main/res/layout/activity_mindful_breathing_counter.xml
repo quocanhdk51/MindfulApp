@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MindfulBreathingCounter"
+    android:background="@android:color/holo_blue_light">
+
+    <include android:id="@+id/myToolBar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/monthTextView"
+        />
+
+
+
+    <TextView
+        android:id="@+id/monthTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="This Month"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintTop_toBottomOf="@id/myToolBar"
+        app:layout_constraintBottom_toTopOf="@id/timeMonthTextView"/>
+
+    <TextView
+        android:id="@+id/timeMonthTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="00:00:00"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintTop_toBottomOf="@id/monthTextView"
+        app:layout_constraintBottom_toTopOf="@id/weekTextView"/>
+
+    <TextView
+        android:id="@+id/weekTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="This Week"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintTop_toBottomOf="@id/timeMonthTextView"
+        app:layout_constraintBottom_toTopOf="@id/timeWeekTextView"/>
+
+    <TextView
+        android:id="@+id/timeWeekTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="00:00:00"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintTop_toBottomOf="@id/weekTextView"
+        app:layout_constraintBottom_toTopOf="@id/dayTextView"/>
+
+    <TextView
+        android:id="@+id/dayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Today"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintTop_toBottomOf="@id/timeWeekTextView"
+        app:layout_constraintBottom_toTopOf="@id/timeDayTextView"/>
+
+    <TextView
+        android:id="@+id/timeDayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="00:00:00"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintTop_toBottomOf="@id/dayTextView"
+        app:layout_constraintBottom_toTopOf="@id/buttonHolder"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.18"
+        android:id="@+id/getToTimerButton"
+        app:layout_constraintTop_toBottomOf="@id/timeDayTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Start Mindful Breathing"
+        android:onClick="mindBreathingCounterClicked"/>
+</android.support.constraint.ConstraintLayout>
